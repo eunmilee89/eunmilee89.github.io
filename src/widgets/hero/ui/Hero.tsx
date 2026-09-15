@@ -6,8 +6,8 @@ import { SocialLink } from "@/src/shared/ui/SocialLink";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col-reverse lg:flex-row items-center justify-between  lg:gap-4 px-4 md:px-8 lg:px-0">
-      <div className="text-center lg:text-left lg:py-40">
+    <div className="flex flex-col-reverse lg:flex-row items-center justify-between  lg:gap-4 px-4 py-20 lg:py-0 md:px-8 lg:px-0 max-w-[102rem]  mx-auto">
+      <div className="text-center lg:text-left lg:py-48 2xl:pl-30">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black leading-tight break-keep tracking-tight">
           안녕하세요.{" "}
           <span

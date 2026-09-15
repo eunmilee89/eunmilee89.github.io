@@ -37,7 +37,7 @@ export function MobileMenu({
             type="button"
             aria-label="메뉴 닫기"
             onClick={onClose}
-            className="text-foreground"
+            className="text-foreground cursor-pointer"
           >
             <FiX className="w-6 h-6" />
           </button>

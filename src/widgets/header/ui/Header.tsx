@@ -38,7 +38,7 @@ export default function Header() {
           onClick={() => setIsOpen(true)}
           className="text-foreground"
         >
-          <FiMenu className="w-6 h-6" />
+          <FiMenu className="w-6 h-6 cursor-pointer" />
         </button>
       </div>
 
