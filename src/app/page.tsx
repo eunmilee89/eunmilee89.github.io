@@ -1,4 +1,4 @@
-import Hero from "../widgets/hero/Hero";
+import Hero from "../widgets/hero/ui/Hero";
 
 export default function Home() {
   return (

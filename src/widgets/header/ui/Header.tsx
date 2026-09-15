@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { FiMenu } from "react-icons/fi";
-import { MobileMenu } from "./ui/MobileMenu";
+import { MobileMenu } from "./MobileMenu";
 
 const NAV_ITEMS = [
   { label: "Home", href: "/" },

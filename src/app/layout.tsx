@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "../widgets/header/Header";
-import Footer from "../widgets/footer/Footer";
+import Footer from "../widgets/footer/ui/Footer";
+import Header from "../widgets/header/ui/Header";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -19,7 +19,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className={` ${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col p-6 mx-2">
         <Header />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
