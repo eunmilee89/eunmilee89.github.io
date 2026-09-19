@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Button from "@/src/shared/ui/Button";
 import { FaLinkedinIn } from "react-icons/fa";
-import { FiDownload, FiGithub, FiGlobe } from "react-icons/fi";
+import { FiGithub, FiGlobe } from "react-icons/fi";
 import { SocialLink } from "@/src/shared/ui/SocialLink";
+import { RiShareBoxLine } from "react-icons/ri";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col-reverse lg:flex-row items-center justify-between lg:gap-4 py-20 lg:py-0 md:px-8 lg:px-0 max-w-[102rem]  mx-auto">
+    <div className="flex flex-col-reverse lg:flex-row items-center justify-between lg:gap-4 md:py-10 lg:py-0 md:px-8 lg:px-0 max-w-[102rem]  mx-auto">
       <div className="text-center lg:text-left lg:py-48 lg:pl-20 2xl:pl-30">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black leading-tight break-keep tracking-tight">
           안녕하세요.{" "}
@@ -26,7 +27,7 @@ export default function Hero() {
 "
         >
           새로운 기술을 학습하고 실제 제품에 적용하는 과정을 좋아합니다. 사용자
-          중심의 부드러운 인터렉션과 완성도 높은 인터페이스 아키텍처를 추구하는
+          중심의 부드러운 인터렉션과 완성도 높은 인터페이스를 추구하는
           개발자입니다.
         </div>
         <ul className="flex items-center justify-center lg:justify-start gap-3 lg:gap-4 mt-8 flex-wrap">
@@ -34,8 +35,8 @@ export default function Hero() {
             <Button
               path="/files/이은미_이력서.pdf"
               text="이력서 보기"
-              icon={<FiDownload />}
-              download="이은미_이력서.pdf"
+              icon={<RiShareBoxLine />}
+              target="_blank"
             />
           </li>
           <div className="flex gap-2 lg:gap-4">
