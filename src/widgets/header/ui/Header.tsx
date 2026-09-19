@@ -24,7 +24,7 @@ export default function Header() {
   }, [isOpen]);
 
   return (
-    <header className="relative flex items-center justify-between">
+    <header className="sticky top-0 z-100 flex items-center justify-between py-6 bg-white">
       <div className="flex items-center justify-between w-full lg:hidden">
         <Link href="/" className="font-extrabold text-foreground text-xl">
           <h1>
@@ -44,7 +44,7 @@ export default function Header() {
 
       <Link
         href="/"
-        className="hidden lg:block font-extrabold text-foreground text-xl pb-6"
+        className="hidden lg:block font-extrabold text-foreground text-xl"
       >
         Dev<span className="text-primary">.Portfolio</span>
       </Link>
