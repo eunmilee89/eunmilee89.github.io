@@ -24,7 +24,7 @@ export default function Header() {
   }, [isOpen]);
 
   return (
-    <header className="sticky top-0 z-100 flex items-center justify-between py-6 bg-white">
+    <header className="sticky top-0 z-100 flex items-center justify-between py-6 bg-background">
       <div className="flex items-center justify-between w-full lg:hidden">
         <Link href="/" className="font-extrabold text-foreground text-xl">
           <h1>
