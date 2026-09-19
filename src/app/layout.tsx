@@ -13,7 +13,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`h-full  antialiased ${pretendard.variable} font-sans`}
+      className={`h-full antialiased ${pretendard.variable} font-sans`}
     >
       <body className="flex flex-col min-h-dvh px-6 mx-2">
         <Header />
