@@ -22,7 +22,7 @@ export default function Hero() {
           개발자 이은미입니다.
         </h2>
         <div
-          className="text-secondary mt-4 text-sm sm:text-base md:text-base max-w-md md:max-w-lg lg:max-w-3xl mx-auto lg:mx-0 break-keep tracking-wide
+          className="text-subtext mt-4 text-sm sm:text-base md:text-base max-w-md md:max-w-lg lg:max-w-3xl mx-auto lg:mx-0 break-keep tracking-wide
 "
         >
           새로운 기술을 학습하고 실제 제품에 적용하는 과정을 좋아합니다. 사용자

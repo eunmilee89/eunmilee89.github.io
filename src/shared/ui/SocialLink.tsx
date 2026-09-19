@@ -14,7 +14,7 @@ export function SocialLink({ href, icon, label }: SocialLinkProps) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-background border border-zinc-200 text-foreground transition-all duration-200 ease-out hover:text-primary"
+      className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-background border border-line text-foreground transition-all duration-200 ease-out hover:text-primary"
     >
       <span className="[&>svg]:w-5 [&>svg]:h-5 md:[&>svg]:w-6 md:[&>svg]:h-6 text-foreground">
         {icon}
