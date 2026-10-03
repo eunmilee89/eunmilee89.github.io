@@ -1,3 +1,5 @@
-export default function CodingTestPage() {
-  return <div>CodingTestPage</div>;
+import { CodingTestPage } from "@/views/coding-test";
+
+export default function Page() {
+  return <CodingTestPage />;
 }

@@ -1,11 +1,5 @@
-import ExperienceSection from "../widgets/experience/ui/Experience";
-import Hero from "../widgets/hero/ui/Hero";
+import { HomePage } from "@/views/home";
 
-export default function Home() {
-  return (
-    <>
-      <Hero />
-      <ExperienceSection />
-    </>
-  );
+export default function Page() {
+  return <HomePage />;
 }

@@ -1,3 +1,5 @@
-export default function ContactPage() {
-  return <div>ContactPage</div>;
+import { ContactPage } from "@/views/contact";
+
+export default function Page() {
+  return <ContactPage />;
 }
