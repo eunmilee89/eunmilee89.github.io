@@ -1,18 +1,13 @@
 "use client";
-import Button from "@/src/shared/ui/Button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { FiMenu } from "react-icons/fi";
+import { Button } from "@/shared/ui/button";
+import { CONTACT_ITEM, NAV_ITEMS } from "../model/navItems";
 import { MobileMenu } from "./MobileMenu";
 
-const NAV_ITEMS = [
-  { label: "Home", href: "/" },
-  { label: "My Projects", href: "/projects" },
-  { label: "Coding Test", href: "/coding-test" },
-];
-
-export default function Header() {
+export function Header() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -79,14 +74,13 @@ export default function Header() {
       </nav>
 
       <div className="hidden lg:block">
-        <Button text="Get in touch" path="/contact" />
+        <Button text={CONTACT_ITEM.label} path={CONTACT_ITEM.href} />
       </div>
 
       <MobileMenu
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
         pathname={pathname}
-        navItems={NAV_ITEMS}
       />
     </header>
   );
