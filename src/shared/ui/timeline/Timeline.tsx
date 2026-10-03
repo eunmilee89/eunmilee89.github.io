@@ -42,11 +42,7 @@ export function Timeline({ items }: TimelineProps) {
               </h3>
               <ul className="mt-2 space-y-2 text-sm md:text-base text-subtext break-keep">
                 {item.description.map((desc, idx) => (
-                  <li
-                    key={idx}
-                    className="list-disc list-inside tracking-wide
-"
-                  >
+                  <li key={idx} className="list-disc list-inside tracking-wide">
                     {desc}
                   </li>
                 ))}
