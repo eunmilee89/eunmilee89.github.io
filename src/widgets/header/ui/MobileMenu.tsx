@@ -1,20 +1,16 @@
 import Link from "next/link";
 import { FiX } from "react-icons/fi";
+import { CONTACT_ITEM, NAV_ITEMS } from "../model/navItems";
 
-interface MobileMenuProps {
+type MobileMenuProps = {
   isOpen: boolean;
   onClose: () => void;
   pathname: string;
-  navItems: { label: string; href: string }[];
-}
+};
 
-export function MobileMenu({
-  isOpen,
-  onClose,
-  pathname,
-  navItems,
-}: MobileMenuProps) {
-  const allItems = [...navItems, { label: "Get in touch", href: "/contact" }];
+const MENU_ITEMS = [...NAV_ITEMS, CONTACT_ITEM];
+
+export function MobileMenu({ isOpen, onClose, pathname }: MobileMenuProps) {
 
   return (
     <>
@@ -44,7 +40,7 @@ export function MobileMenu({
         </div>
 
         <ul className="flex flex-col gap-6 px-6 mt-4">
-          {allItems.map((item) => {
+          {MENU_ITEMS.map((item) => {
             const isActive = pathname === item.href;
             return (
               <li key={item.href}>
