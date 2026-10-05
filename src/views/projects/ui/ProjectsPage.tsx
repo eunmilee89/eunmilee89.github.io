@@ -1,20 +1,22 @@
-import { getProjects, ProjectCard } from "@/entities/project";
-import { Section } from "@/shared/ui/section";
+import { getAllProjects, ProjectCard } from "@/entities/project";
 
-export async function ProjectsPage() {
-  const projects = await getProjects();
+/** 프로젝트 목록 (각 카드 → /projects/[slug]) */
+export function ProjectsPage() {
+  const projects = getAllProjects();
 
   return (
-    <Section>
-      <h1 className="text-2xl font-bold">프로젝트</h1>
+    <div className="mx-auto max-w-5xl px-4 py-20 md:px-6">
+      <h1 className="text-3xl font-extrabold tracking-tight text-fg">
+        Projects
+      </h1>
 
-      <ul className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <ul className="mt-10 grid gap-4 md:grid-cols-2">
         {projects.map((project) => (
           <li key={project.slug}>
-            <ProjectCard project={project} />
+            <ProjectCard {...project} />
           </li>
         ))}
       </ul>
-    </Section>
+    </div>
   );
 }
