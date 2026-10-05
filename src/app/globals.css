@@ -24,6 +24,9 @@
   --primary: #34d399;
   --secondary: #778393;
   --line: #d5d4dc;
+  --surface: #fafafa;
+  --surface-2: #f4f4f5;
+  --accent-rgb: 52 211 153;
 }
 
 @theme inline {
@@ -33,6 +36,14 @@
   --color-secondary: var(--secondary);
   --color-line: var(--line);
   --color-subtext: var(--subtext);
+
+  /* 프로젝트 상세 페이지용 별칭 토큰 */
+  --color-bg: var(--background);
+  --color-fg: var(--foreground);
+  --color-fg-muted: var(--secondary);
+  --color-accent: var(--primary);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,6 +53,8 @@
     --secondary: #94a3b8;
     --line: #404043;
     --subtext: #c0c0c8;
+    --surface: #111113;
+    --surface-2: #18181b;
   }
 }
 
