@@ -3,6 +3,7 @@ export * from "./icons";
 export * from "./link-button";
 export * from "./media-frame";
 export * from "./numbered-section";
+export * from "./reveal";
 export * from "./rich-text";
 export * from "./section";
 export * from "./social-link";
