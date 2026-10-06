@@ -5,7 +5,7 @@ import { RichText } from '@/shared/ui/rich-text';
 
 export function FeatureCard({ title, description, media }: ProjectFeature) {
   return (
-    <article className="overflow-hidden rounded-lg border border-line bg-surface transition-colors hover:border-accent/40">
+    <article className="overflow-hidden rounded-lg border border-line bg-surface transition-colors duration-200 ease-out hover:border-primary/50">
       <div className="relative">
         <MediaFrame media={media} className="rounded-none border-0" />
         {media?.type && (
@@ -15,8 +15,8 @@ export function FeatureCard({ title, description, media }: ProjectFeature) {
         )}
       </div>
       <div className="border-t border-line p-5">
-        <h3 className="text-base font-bold text-fg">{title}</h3>
-        <RichText text={description} className="mt-2 text-sm leading-relaxed text-fg-muted" />
+        <h3 className="text-base font-bold text-foreground">{title}</h3>
+        <RichText text={description} className="mt-2 text-sm leading-relaxed text-secondary" />
       </div>
     </article>
   );

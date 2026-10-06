@@ -13,14 +13,14 @@ export function ProjectOverview({ index, overview }: ProjectOverviewProps) {
       <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-line bg-line md:grid-cols-4">
         {overview.meta.map(({ label, value }) => (
           <div key={label} className="bg-surface p-4">
-            <dt className="text-[11px] font-medium text-fg-muted">{label}</dt>
-            <dd className="mt-1.5 text-sm font-semibold text-fg">{value}</dd>
+            <dt className="text-[11px] font-medium text-secondary">{label}</dt>
+            <dd className="mt-1.5 text-sm font-semibold text-foreground">{value}</dd>
           </div>
         ))}
       </dl>
 
       <div className="mt-4 rounded-lg border border-line bg-surface p-5 md:p-6">
-        <RichText text={overview.description} className="text-sm leading-7 text-fg/85" />
+        <RichText text={overview.description} className="text-sm leading-7 text-foreground/85" />
       </div>
     </NumberedSection>
   );

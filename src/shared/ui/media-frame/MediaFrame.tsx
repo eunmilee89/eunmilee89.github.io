@@ -22,11 +22,11 @@ export function MediaFrame({ media, browserChrome, url = 'localhost:3000', class
       {browserChrome && (
         <div className="flex items-center gap-3 border-b border-line px-4 py-2.5">
           <div className="flex gap-1.5" aria-hidden>
-            <span className="h-2.5 w-2.5 rounded-full bg-fg-muted/30" />
-            <span className="h-2.5 w-2.5 rounded-full bg-fg-muted/30" />
-            <span className="h-2.5 w-2.5 rounded-full bg-fg-muted/30" />
+            <span className="h-2.5 w-2.5 rounded-full bg-secondary/30" />
+            <span className="h-2.5 w-2.5 rounded-full bg-secondary/30" />
+            <span className="h-2.5 w-2.5 rounded-full bg-secondary/30" />
           </div>
-          <span className="rounded bg-surface-2 px-3 py-0.5 font-mono text-[11px] text-fg-muted">{url}</span>
+          <span className="rounded bg-surface-2 px-3 py-0.5 font-mono text-[11px] text-secondary">{url}</span>
         </div>
       )}
 
@@ -45,8 +45,8 @@ export function MediaFrame({ media, browserChrome, url = 'localhost:3000', class
             />
           )
         ) : (
-          <div className="absolute inset-0 grid place-items-center bg-[radial-gradient(circle_at_center,rgb(var(--accent-rgb)/0.18),transparent_60%)]">
-            <span className="rounded border border-line bg-bg/70 px-3 py-1 font-mono text-[11px] text-fg-muted">
+          <div className="absolute inset-0 grid place-items-center bg-[radial-gradient(circle_at_center,color-mix(in_srgb,var(--color-primary)_18%,transparent),transparent_60%)]">
+            <span className="rounded border border-line bg-background/70 px-3 py-1 font-mono text-[11px] text-secondary">
               {media?.alt ?? '미디어'} {media?.type && `· ${media.type.toUpperCase()}`} 삽입 영역
             </span>
           </div>

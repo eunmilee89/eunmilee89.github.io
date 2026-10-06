@@ -9,9 +9,9 @@ interface BadgeProps {
 }
 
 const variants = {
-  outline: 'border border-accent/40 text-accent bg-accent/5',
-  solid: 'bg-accent/15 text-accent',
-  mono: 'border border-line bg-surface-2 font-mono text-accent',
+  outline: 'border border-primary/40 text-primary bg-primary/5',
+  solid: 'bg-primary/15 text-primary',
+  mono: 'border border-line bg-surface-2 font-mono text-primary',
 } as const;
 
 export function Badge({ children, variant = 'outline', dot, className }: BadgeProps) {
@@ -23,7 +23,7 @@ export function Badge({ children, variant = 'outline', dot, className }: BadgePr
         className,
       )}
     >
-      {dot && <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />}
+      {dot && <span className="h-1.5 w-1.5 rounded-full bg-primary" aria-hidden />}
       {children}
     </span>
   );

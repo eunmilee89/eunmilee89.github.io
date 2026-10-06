@@ -1,5 +1,4 @@
 export * from "./badge";
-export * from "./button";
 export * from "./icons";
 export * from "./link-button";
 export * from "./media-frame";
