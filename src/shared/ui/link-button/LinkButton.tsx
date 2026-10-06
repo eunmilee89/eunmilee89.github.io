@@ -22,7 +22,7 @@ export function LinkButton({ label, href, variant = 'secondary', icon }: LinkBut
       href={href}
       {...(isExternal && { target: '_blank', rel: 'noopener noreferrer' })}
       className={cn(
-        'inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition-colors',
+        'inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition-colors duration-200 ease-out',
         variants[variant],
       )}
     >

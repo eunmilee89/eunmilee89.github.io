@@ -5,7 +5,7 @@ import { RichText } from '@/shared/ui/rich-text';
 
 export function FeatureCard({ title, description, media }: ProjectFeature) {
   return (
-    <article className="overflow-hidden rounded-lg border border-line bg-surface transition-colors hover:border-primary/40">
+    <article className="overflow-hidden rounded-lg border border-line bg-surface transition-colors duration-200 ease-out hover:border-primary/50">
       <div className="relative">
         <MediaFrame media={media} className="rounded-none border-0" />
         {media?.type && (
