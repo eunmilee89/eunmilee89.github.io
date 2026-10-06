@@ -14,9 +14,11 @@ interface MediaFrameProps {
   browserChrome?: boolean;
   url?: string;
   className?: string;
+  /** 프레임 크기는 고정한 채 안쪽 미디어에만 효과(확대 등)를 줄 때 사용 */
+  mediaClassName?: string;
 }
 
-export function MediaFrame({ media, browserChrome, url = 'localhost:3000', className }: MediaFrameProps) {
+export function MediaFrame({ media, browserChrome, url = 'localhost:3000', className, mediaClassName }: MediaFrameProps) {
   return (
     <div className={cn('overflow-hidden rounded-lg border border-line bg-surface', className)}>
       {browserChrome && (
@@ -30,10 +32,10 @@ export function MediaFrame({ media, browserChrome, url = 'localhost:3000', class
         </div>
       )}
 
-      <div className="relative aspect-video">
+      <div className="relative aspect-video overflow-hidden">
         {media?.src ? (
           media.type === 'video' ? (
-            <video src={media.src} autoPlay muted loop playsInline className="h-full w-full object-cover" />
+            <video src={media.src} autoPlay muted loop playsInline className={cn('h-full w-full object-cover', mediaClassName)} />
           ) : (
             <Image
               src={media.src}
@@ -41,11 +43,11 @@ export function MediaFrame({ media, browserChrome, url = 'localhost:3000', class
               fill
               unoptimized={media.type === 'gif'}
               sizes="(max-width: 768px) 100vw, 960px"
-              className="object-cover"
+              className={cn('object-cover', mediaClassName)}
             />
           )
         ) : (
-          <div className="absolute inset-0 grid place-items-center bg-[radial-gradient(circle_at_center,color-mix(in_srgb,var(--color-primary)_18%,transparent),transparent_60%)]">
+          <div className={cn('absolute inset-0 grid place-items-center bg-[radial-gradient(circle_at_center,color-mix(in_srgb,var(--color-primary)_18%,transparent),transparent_60%)]', mediaClassName)}>
             <span className="rounded border border-line bg-background/70 px-3 py-1 font-mono text-[11px] text-secondary">
               {media?.alt ?? '미디어'} {media?.type && `· ${media.type.toUpperCase()}`} 삽입 영역
             </span>
