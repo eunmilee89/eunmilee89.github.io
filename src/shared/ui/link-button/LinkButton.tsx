@@ -10,8 +10,8 @@ export interface LinkButtonProps {
 }
 
 const variants = {
-  primary: 'bg-accent text-bg hover:bg-accent/90',
-  secondary: 'border border-line bg-surface text-fg hover:border-accent/50 hover:text-accent',
+  primary: 'bg-primary text-background hover:bg-primary/90',
+  secondary: 'border border-line bg-surface text-foreground hover:border-primary/50 hover:text-primary',
 } as const;
 
 export function LinkButton({ label, href, variant = 'secondary', icon }: LinkButtonProps) {

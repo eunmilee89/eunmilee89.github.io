@@ -13,7 +13,7 @@ export function RichText({ text, className }: RichTextProps) {
     <p className={className}>
       {parts.map((part, i) =>
         part.startsWith('**') && part.endsWith('**') ? (
-          <strong key={i} className="font-semibold text-accent">
+          <strong key={i} className="font-semibold text-primary">
             {part.slice(2, -2)}
           </strong>
         ) : (

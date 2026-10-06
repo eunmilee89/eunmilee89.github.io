@@ -17,11 +17,11 @@ export function ChallengeCard(challenge: Challenge) {
     <article className="overflow-hidden rounded-lg border border-line bg-surface">
       <header className="flex items-center gap-3 border-b border-line px-5 py-3.5">
         <Badge variant="mono" className="rounded px-2 py-0.5">{hash}</Badge>
-        <h3 className="flex-1 text-sm font-bold text-fg md:text-base">{title}</h3>
+        <h3 className="flex-1 text-sm font-bold text-foreground md:text-base">{title}</h3>
         {diff && (
           <span className="shrink-0 font-mono text-xs">
             <span className="text-red-400">-{diff.removed}</span>{' '}
-            <span className="text-accent">+{diff.added}</span>
+            <span className="text-primary">+{diff.added}</span>
           </span>
         )}
       </header>
@@ -30,11 +30,11 @@ export function ChallengeCard(challenge: Challenge) {
         {STEPS.map(({ key, label }) => {
           const isResult = key === 'result';
           return (
-            <li key={key} className={cn('p-5', isResult && 'bg-accent/[0.04]')}>
-              <h4 className={cn('mb-2 text-[11px] font-medium', isResult ? 'text-accent' : 'text-fg-muted')}>
+            <li key={key} className={cn('p-5', isResult && 'bg-primary/[0.04]')}>
+              <h4 className={cn('mb-2 text-[11px] font-medium', isResult ? 'text-primary' : 'text-secondary')}>
                 {label}
               </h4>
-              <RichText text={challenge[key]} className="text-[13px] leading-relaxed text-fg/85" />
+              <RichText text={challenge[key]} className="text-[13px] leading-relaxed text-foreground/85" />
             </li>
           );
         })}

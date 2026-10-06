@@ -9,10 +9,10 @@
   @keyframes glow-pulse {
     0%,
     100% {
-      box-shadow: 0 0 6px rgba(52, 211, 153, 0.4);
+      box-shadow: 0 0 6px color-mix(in srgb, var(--color-primary) 40%, transparent);
     }
     50% {
-      box-shadow: 0 0 18px rgb(52, 211, 153);
+      box-shadow: 0 0 18px var(--color-primary);
     }
   }
 }
@@ -26,7 +26,6 @@
   --line: #d5d4dc;
   --surface: #fafafa;
   --surface-2: #f4f4f5;
-  --accent-rgb: 52 211 153;
 }
 
 @theme inline {
@@ -36,12 +35,6 @@
   --color-secondary: var(--secondary);
   --color-line: var(--line);
   --color-subtext: var(--subtext);
-
-  /* 프로젝트 상세 페이지용 별칭 토큰 */
-  --color-bg: var(--background);
-  --color-fg: var(--foreground);
-  --color-fg-muted: var(--secondary);
-  --color-accent: var(--primary);
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
 }

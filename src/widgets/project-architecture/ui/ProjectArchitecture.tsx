@@ -12,8 +12,8 @@ export function ProjectArchitecture({ index, architecture }: ProjectArchitecture
       <ul className="space-y-3">
         {architecture.notes.map(({ title, description }) => (
           <li key={title} className="rounded-lg border border-line bg-surface p-5">
-            <h3 className="text-sm font-bold text-accent">{title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-fg/80">{description}</p>
+            <h3 className="text-sm font-bold text-primary">{title}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-foreground/80">{description}</p>
           </li>
         ))}
       </ul>

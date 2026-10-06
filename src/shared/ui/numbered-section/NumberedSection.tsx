@@ -13,8 +13,8 @@ export function NumberedSection({ id, index, title, children }: NumberedSectionP
   return (
     <section id={id} className="scroll-mt-20 py-16 md:py-20">
       <header className="mb-8 flex items-baseline gap-3">
-        <span className="font-mono text-sm text-accent">{String(index).padStart(2, '0')}</span>
-        <h2 className="text-xl font-bold tracking-tight text-fg md:text-2xl">{title}</h2>
+        <span className="font-mono text-sm text-primary">{String(index).padStart(2, '0')}</span>
+        <h2 className="text-xl font-bold tracking-tight text-foreground md:text-2xl">{title}</h2>
       </header>
       {children}
     </section>
