@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { FiMenu } from "react-icons/fi";
-import { Button } from "@/shared/ui/button";
+import { LinkButton } from "@/shared/ui/link-button";
 import { CONTACT_ITEM, NAV_ITEMS } from "../model/navItems";
 import { MobileMenu } from "./MobileMenu";
 
@@ -74,7 +74,11 @@ export function Header() {
       </nav>
 
       <div className="hidden lg:block">
-        <Button text={CONTACT_ITEM.label} path={CONTACT_ITEM.href} />
+        <LinkButton
+          label={CONTACT_ITEM.label}
+          href={CONTACT_ITEM.href}
+          variant="primary"
+        />
       </div>
 
       <MobileMenu

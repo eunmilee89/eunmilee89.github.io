@@ -1,9 +1,8 @@
 import Image from "next/image";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub, FiGlobe } from "react-icons/fi";
-import { RiShareBoxLine } from "react-icons/ri";
 import { RESUME_PATH, SOCIAL_LINKS } from "@/shared/config";
-import { Button } from "@/shared/ui/button";
+import { LinkButton } from "@/shared/ui/link-button";
 import { SocialLink } from "@/shared/ui/social-link";
 
 export function Hero() {
@@ -31,11 +30,12 @@ export function Hero() {
           개발자입니다.
         </div>
         <div className="flex items-center justify-center lg:justify-start gap-3 lg:gap-4 mt-8 flex-wrap">
-          <Button
-            path={RESUME_PATH}
-            text="이력서 보기"
-            icon={<RiShareBoxLine />}
-            target="_blank"
+          <LinkButton
+            label="이력서 보기"
+            href={RESUME_PATH}
+            variant="primary"
+            icon="demo"
+            shouldOpenNewTab
           />
           <ul className="flex gap-2 lg:gap-4">
             <li>

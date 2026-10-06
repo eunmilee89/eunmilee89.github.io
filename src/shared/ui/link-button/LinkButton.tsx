@@ -7,6 +7,7 @@ export interface LinkButtonProps {
   href: string;
   variant?: 'primary' | 'secondary';
   icon?: 'github' | 'demo';
+  shouldOpenNewTab?: boolean;
 }
 
 const variants = {
@@ -14,13 +15,13 @@ const variants = {
   secondary: 'border border-line bg-surface text-foreground hover:border-primary/50 hover:text-primary',
 } as const;
 
-export function LinkButton({ label, href, variant = 'secondary', icon }: LinkButtonProps) {
-  const isExternal = href.startsWith('http');
+export function LinkButton({ label, href, variant = 'secondary', icon, shouldOpenNewTab }: LinkButtonProps) {
+  const isNewTab = shouldOpenNewTab ?? href.startsWith('http');
 
   return (
     <Link
       href={href}
-      {...(isExternal && { target: '_blank', rel: 'noopener noreferrer' })}
+      {...(isNewTab && { target: '_blank', rel: 'noopener noreferrer' })}
       className={cn(
         'inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition-colors duration-200 ease-out',
         variants[variant],
