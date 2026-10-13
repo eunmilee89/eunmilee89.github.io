@@ -1,5 +1,5 @@
+import "pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css";
 import "./globals.css";
-import { pretendard } from "@/shared/fonts";
 import { Footer } from "@/widgets/footer";
 import { Header } from "@/widgets/header";
 
@@ -11,10 +11,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="ko"
-      className={`h-full antialiased ${pretendard.variable} font-sans`}
-    >
+    <html lang="ko" className="h-full antialiased font-sans">
       <body className="flex flex-col min-h-dvh px-6 mx-2">
         <Header />
         <main>{children}</main>
