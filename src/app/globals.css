@@ -2,7 +2,7 @@
 
 @theme {
   --font-sans:
-    var(--font-pretendard), -apple-system, BlinkMacSystemFont, system-ui,
+    "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui,
     sans-serif;
   --animate-glow-pulse: glow-pulse 2s ease-in-out infinite;
 
