@@ -1,11 +1,10 @@
 import Image from 'next/image';
 import { cn } from '@/shared/lib';
 
-/** 이미지/GIF/영상. src가 없으면 플레이스홀더를 렌더링합니다. */
+/** 이미지. src가 없으면 플레이스홀더를 렌더링합니다. */
 export interface Media {
   src?: string;
   alt: string;
-  type?: 'image' | 'gif' | 'video';
 }
 
 interface MediaFrameProps {
@@ -34,22 +33,17 @@ export function MediaFrame({ media, browserChrome, url = 'localhost:3000', class
 
       <div className="relative aspect-video overflow-hidden">
         {media?.src ? (
-          media.type === 'video' ? (
-            <video src={media.src} autoPlay muted loop playsInline className={cn('h-full w-full object-cover', mediaClassName)} />
-          ) : (
-            <Image
-              src={media.src}
-              alt={media.alt}
-              fill
-              unoptimized={media.type === 'gif'}
-              sizes="(max-width: 768px) 100vw, 960px"
-              className={cn('object-cover', mediaClassName)}
-            />
-          )
+          <Image
+            src={media.src}
+            alt={media.alt}
+            fill
+            sizes="(max-width: 768px) 100vw, 960px"
+            className={cn('object-cover', mediaClassName)}
+          />
         ) : (
           <div className={cn('absolute inset-0 grid place-items-center bg-[radial-gradient(circle_at_center,color-mix(in_srgb,var(--color-primary)_18%,transparent),transparent_60%)]', mediaClassName)}>
             <span className="rounded border border-line bg-background/70 px-3 py-1 font-mono text-[11px] text-secondary">
-              {media?.alt ?? '미디어'} {media?.type && `· ${media.type.toUpperCase()}`} 삽입 영역
+              {media?.alt ?? '이미지'} 삽입 영역
             </span>
           </div>
         )}
