@@ -11,7 +11,7 @@ export interface LinkButtonProps {
 }
 
 const variants = {
-  primary: 'bg-primary text-background hover:bg-primary/90',
+  primary: 'bg-primary text-background hover:bg-primary/80',
   secondary: 'border border-line bg-surface text-foreground hover:border-primary/50 hover:text-primary',
 } as const;
 
