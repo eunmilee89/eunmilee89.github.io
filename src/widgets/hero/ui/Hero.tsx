@@ -22,9 +22,7 @@ export function Hero() {
           </span>{" "}
           개발자 이은미입니다.
         </h2>
-        <div
-          className="text-subtext mt-4 text-sm sm:text-base md:text-base max-w-md md:max-w-lg lg:max-w-3xl mx-auto lg:mx-0 break-keep tracking-wide"
-        >
+        <div className="text-subtext mt-4 text-sm sm:text-base md:text-base max-w-md md:max-w-lg lg:max-w-3xl mx-auto lg:mx-0 break-keep tracking-wide">
           새로운 기술을 학습하고 실제 제품에 적용하는 과정을 좋아합니다. 사용자
           중심의 부드러운 인터렉션과 완성도 높은 인터페이스를 추구하는
           개발자입니다.
