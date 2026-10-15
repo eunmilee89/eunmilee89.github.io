@@ -19,7 +19,8 @@ export function Header() {
   }, [isOpen]);
 
   return (
-    <header className="sticky top-0 z-100 flex items-center justify-between py-6 bg-background">
+    // body 좌우 여백(px-6 + mx-2)까지 배경을 덮어야 화면 끝까지 깔린 콘텐츠가 헤더 옆으로 비치지 않는다
+    <header className="sticky top-0 z-100 flex items-center justify-between py-6 bg-background before:absolute before:inset-y-0 before:-inset-x-8 before:-z-10 before:bg-background">
       <div className="flex items-center justify-between w-full lg:hidden">
         <Link href="/" className="font-extrabold text-foreground text-xl">
           <h1>
