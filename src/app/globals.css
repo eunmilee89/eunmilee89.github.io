@@ -5,6 +5,10 @@
     "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui,
     sans-serif;
   --animate-glow-pulse: glow-pulse 2s ease-in-out infinite;
+  --animate-rise-in: rise-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-gradient-flow: gradient-flow 6s linear infinite;
+  --animate-blob-drift: blob-drift 14s ease-in-out infinite alternate;
+  --animate-flow-dot: flow-dot 3s ease-in-out infinite;
 
   @keyframes glow-pulse {
     0%,
@@ -13,6 +17,53 @@
     }
     50% {
       box-shadow: 0 0 18px var(--color-primary);
+    }
+  }
+
+  @keyframes rise-in {
+    from {
+      opacity: 0;
+      transform: translateY(2rem);
+      filter: blur(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+
+  /* 배경 크기를 200%로 두고 시작색으로 끝나는 그라디언트를 써야 반복 지점이 끊기지 않는다 */
+  @keyframes gradient-flow {
+    to {
+      background-position: 200% 50%;
+    }
+  }
+
+  @keyframes blob-drift {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(8%, -6%) scale(1.15);
+    }
+    100% {
+      transform: translate(-6%, 8%) scale(0.95);
+    }
+  }
+
+  @keyframes flow-dot {
+    from {
+      top: 0%;
+      opacity: 0;
+    }
+    15%,
+    85% {
+      opacity: 1;
+    }
+    to {
+      top: 100%;
+      opacity: 0;
     }
   }
 }

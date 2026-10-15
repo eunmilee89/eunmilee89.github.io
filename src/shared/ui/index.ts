@@ -1,4 +1,5 @@
 export * from "./badge";
+export * from "./gradient-text";
 export * from "./icons";
 export * from "./link-button";
 export * from "./media-frame";

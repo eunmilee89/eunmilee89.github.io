@@ -1,4 +1,5 @@
 import { getAllProjects, ProjectCard } from "@/entities/project";
+import { PROJECT_LIST_ID, ProjectsHero } from "@/widgets/projects-hero";
 import { Reveal } from "@/shared/ui/reveal";
 
 /** 프로젝트 목록 (각 항목 → /projects/[slug]) */
@@ -6,29 +7,23 @@ export function ProjectsPage() {
   const projects = getAllProjects();
 
   return (
-    <div className="mx-auto max-w-5xl px-4 pt-10 pb-20 md:px-6 md:pt-14 md:pb-28">
-      <Reveal>
-        <header className="text-center lg:text-left">
-          <h1 className="text-3xl font-black tracking-tight text-foreground break-keep md:text-4xl lg:text-5xl">
-            My Projects
-          </h1>
-          <p className="mt-5 text-sm leading-relaxed text-subtext break-keep mx-auto md:text-base lg:mx-0">
-            화면을 그리는 데서 멈추지 않고, 데이터가 어떻게 흐르고 사용자의
-            상호작용을 고민하며 만든 프로젝트들입니다. 각 프로젝트에서 마주친
-            문제와 그것을 풀어낸 과정을 함께 담았습니다.
-          </p>
-        </header>
-      </Reveal>
+    <>
+      <ProjectsHero projectCount={projects.length} />
 
-      <ul className="mt-12 flex flex-col gap-16 md:mt-16 md:gap-32">
-        {projects.map((project) => (
-          <li key={project.slug}>
-            <Reveal>
-              <ProjectCard {...project} />
-            </Reveal>
-          </li>
-        ))}
-      </ul>
-    </div>
+      <div className="mx-auto max-w-5xl px-4 pt-16 pb-20 md:px-6 md:pt-24 md:pb-28">
+        <ul
+          id={PROJECT_LIST_ID}
+          className="flex scroll-mt-28 flex-col gap-16 md:gap-32"
+        >
+          {projects.map((project) => (
+            <li key={project.slug}>
+              <Reveal>
+                <ProjectCard {...project} />
+              </Reveal>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
   );
 }
