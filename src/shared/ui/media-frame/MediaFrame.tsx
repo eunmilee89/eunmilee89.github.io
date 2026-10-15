@@ -1,5 +1,6 @@
-import Image from 'next/image';
 import { cn } from '@/shared/lib';
+import { MediaImage } from './MediaImage';
+import { MediaPlaceholder } from './MediaPlaceholder';
 
 /** 이미지. src가 없으면 플레이스홀더를 렌더링합니다. */
 export interface Media {
@@ -11,13 +12,14 @@ interface MediaFrameProps {
   media?: Media;
   /** 브라우저 창 크롬(상단 점 3개 + 주소창) 표시 여부 */
   browserChrome?: boolean;
+  /** 주소창에 표시할 URL. 없으면 주소창을 생략합니다. */
   url?: string;
   className?: string;
   /** 프레임 크기는 고정한 채 안쪽 미디어에만 효과(확대 등)를 줄 때 사용 */
   mediaClassName?: string;
 }
 
-export function MediaFrame({ media, browserChrome, url = 'localhost:3000', className, mediaClassName }: MediaFrameProps) {
+export function MediaFrame({ media, browserChrome, url, className, mediaClassName }: MediaFrameProps) {
   return (
     <div className={cn('overflow-hidden rounded-lg border border-line bg-surface', className)}>
       {browserChrome && (
@@ -27,25 +29,15 @@ export function MediaFrame({ media, browserChrome, url = 'localhost:3000', class
             <span className="h-2.5 w-2.5 rounded-full bg-secondary/30" />
             <span className="h-2.5 w-2.5 rounded-full bg-secondary/30" />
           </div>
-          <span className="rounded bg-surface-2 px-3 py-0.5 font-mono text-[11px] text-secondary">{url}</span>
+          {url && <span className="rounded bg-surface-2 px-3 py-0.5 font-mono text-[11px] text-secondary">{url}</span>}
         </div>
       )}
 
       <div className="relative aspect-video overflow-hidden">
         {media?.src ? (
-          <Image
-            src={media.src}
-            alt={media.alt}
-            fill
-            sizes="(max-width: 768px) 100vw, 960px"
-            className={cn('object-cover', mediaClassName)}
-          />
+          <MediaImage src={media.src} alt={media.alt} className={mediaClassName} />
         ) : (
-          <div className={cn('absolute inset-0 grid place-items-center bg-[radial-gradient(circle_at_center,color-mix(in_srgb,var(--color-primary)_18%,transparent),transparent_60%)]', mediaClassName)}>
-            <span className="rounded border border-line bg-background/70 px-3 py-1 font-mono text-[11px] text-secondary">
-              {media?.alt ?? '이미지'} 삽입 영역
-            </span>
-          </div>
+          <MediaPlaceholder label={`${media?.alt ?? '이미지'} 삽입 영역`} className={mediaClassName} />
         )}
       </div>
     </div>
