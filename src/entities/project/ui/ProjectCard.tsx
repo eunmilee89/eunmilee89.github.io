@@ -18,11 +18,14 @@ export function ProjectCard({
 }: ProjectCardProps) {
   return (
     <Link href={`/projects/${slug}`} className="group block">
-      <MediaFrame
-        media={heroMedia ?? { alt: title }}
-        mediaClassName="transition-transform duration-500 ease-out group-hover:scale-105 group-focus-visible:scale-105 motion-reduce:transition-none"
-      />
-      <h2 className="mt-4 text-xl font-bold text-foreground transition-colors duration-200 group-hover:text-primary md:mt-6 md:text-3xl">
+      <div className="relative">
+        <MediaFrame media={heroMedia ?? { alt: title }} />
+        <div
+          className="pointer-events-none absolute inset-0 rounded-lg bg-black/0 transition-colors duration-300 ease-out group-hover:bg-black/10 group-focus-visible:bg-black/10 motion-reduce:transition-none"
+          aria-hidden
+        />
+      </div>
+      <h2 className="mt-4 text-xl font-bold text-foreground  md:mt-6 md:text-3xl">
         {title}
       </h2>
       <p className="mt-2 text-sm leading-relaxed text-secondary break-keep md:mt-3 md:text-base">
@@ -32,7 +35,7 @@ export function ProjectCard({
       <ul className="mt-5 hidden flex-wrap gap-2 md:flex">
         {getTechNames(techStack).map((name) => (
           <li key={name}>
-            <Badge variant="mono">{name}</Badge>
+            <Badge variant="outline">{name}</Badge>
           </li>
         ))}
       </ul>
