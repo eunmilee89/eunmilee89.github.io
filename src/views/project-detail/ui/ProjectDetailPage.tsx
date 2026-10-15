@@ -12,7 +12,7 @@ type ProjectDetailPageProps = {
 
 export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
   return (
-    <div className="mx-auto max-w-5xl px-4 pb-20 md:px-6">
+    <div className="mx-auto max-w-5xl px-4 pb-12 md:px-6 md:pb-20">
       <ProjectHero {...project} />
       <ProjectOverview index={1} overview={project.overview} />
       <ProjectFeatures index={2} features={project.features} />

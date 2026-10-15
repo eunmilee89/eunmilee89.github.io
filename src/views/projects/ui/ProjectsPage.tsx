@@ -6,10 +6,10 @@ export function ProjectsPage() {
   const projects = getAllProjects();
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-20 md:px-6 md:py-28">
+    <div className="mx-auto max-w-5xl px-4 pt-10 pb-20 md:px-6 md:pt-14 md:pb-28">
       <Reveal>
         <header className="text-center lg:text-left">
-          <h1 className="text-4xl font-black tracking-tight text-foreground break-keep md:text-5xl lg:text-6xl">
+          <h1 className="text-3xl font-black tracking-tight text-foreground break-keep md:text-4xl lg:text-5xl">
             My Projects
           </h1>
           <p className="mt-5 text-sm leading-relaxed text-subtext break-keep mx-auto md:text-base lg:mx-0">
@@ -20,7 +20,7 @@ export function ProjectsPage() {
         </header>
       </Reveal>
 
-      <ul className="mt-20 flex flex-col gap-24 md:mt-28 md:gap-32">
+      <ul className="mt-12 flex flex-col gap-16 md:mt-16 md:gap-32">
         {projects.map((project) => (
           <li key={project.slug}>
             <Reveal>

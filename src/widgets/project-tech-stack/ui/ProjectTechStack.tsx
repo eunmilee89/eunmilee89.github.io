@@ -10,7 +10,7 @@ interface ProjectTechStackProps {
 export function ProjectTechStack({ index, groups }: ProjectTechStackProps) {
   return (
     <NumberedSection id="tech-stack" index={index} title="기술 스택">
-      <div className="space-y-10">
+      <div className="space-y-6 md:space-y-10">
         {groups.map((group) => (
           <TechStackGroup key={group.category} {...group} />
         ))}
