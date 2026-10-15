@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub, FiGlobe } from "react-icons/fi";
 import { RESUME_PATH, SOCIAL_LINKS } from "@/shared/config";
+import { GradientText } from "@/shared/ui/gradient-text";
 import { LinkButton } from "@/shared/ui/link-button";
 import { SocialLink } from "@/shared/ui/social-link";
 
@@ -11,15 +12,7 @@ export function Hero() {
       <div className="text-center lg:text-left lg:py-48 lg:pl-20 2xl:pl-30">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black leading-tight break-keep tracking-tight">
           안녕하세요.{" "}
-          <span
-            className="bg-clip-text text-transparent"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, #34d399, #2dd4bf, #f538f8)",
-            }}
-          >
-            프론트엔드
-          </span>{" "}
+          <GradientText>프론트엔드</GradientText>{" "}
           개발자 이은미입니다.
         </h2>
         <div className="text-subtext mt-4 text-sm sm:text-base md:text-base max-w-md md:max-w-lg lg:max-w-3xl mx-auto lg:mx-0 break-keep tracking-wide">
