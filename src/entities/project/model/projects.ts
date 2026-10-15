@@ -1,5 +1,7 @@
 import type { Project } from "./types";
 
+const TASTEBOX_IMAGE_DIR = "/images/projects/tastebox";
+
 export const PROJECTS: Project[] = [
   {
     slug: "tastebox",
@@ -22,7 +24,7 @@ export const PROJECTS: Project[] = [
         icon: "github",
       },
     ],
-    heroMedia: { alt: "메인 화면" },
+    heroMedia: { src: `${TASTEBOX_IMAGE_DIR}/hero.png`, alt: "메인 화면" },
 
     overview: {
       meta: [
@@ -40,25 +42,34 @@ export const PROJECTS: Project[] = [
         title: "컬렉션 보드 생성 · 수정 · 삭제",
         description:
           "제목 · 설명 · 썸네일을 입력해 컬렉션 보드를 만들고, react-hook-form + zod로 유효성을 검사합니다. 삭제는 확인 모달을 거치도록 했습니다.",
-        media: { alt: "컬렉션 보드 생성 화면" },
+        media: {
+          src: `${TASTEBOX_IMAGE_DIR}/collection-create.png`,
+          alt: "컬렉션 보드 생성 화면",
+        },
       },
       {
         title: "컬렉션 콘텐츠 관리",
         description:
           "컬렉션 상세에서 담긴 콘텐츠를 확인하고, 별도 편집 페이지에서 콘텐츠를 추가 · 삭제할 수 있습니다. 새 컬렉션을 만들 때 선택한 콘텐츠가 바로 담기도록 구현했습니다.",
-        media: { alt: "컬렉션 콘텐츠 편집 화면" },
+        media: {
+          src: `${TASTEBOX_IMAGE_DIR}/collection-edit.png`,
+          alt: "컬렉션 콘텐츠 편집 화면",
+        },
       },
       {
         title: "TV · 영화 장르별 탐색",
         description:
           "장르를 선택해 TV · 영화 콘텐츠를 장르별로 모아볼 수 있는 페이지를 구현했습니다.",
-        media: { alt: "장르 페이지 화면" },
+        media: { src: `${TASTEBOX_IMAGE_DIR}/genre.png`, alt: "장르 페이지 화면" },
       },
       {
-        title: "피드백 · 예외 화면",
+        title: "영화 · TV 취향 장르 선택",
         description:
-          "어디서든 호출 가능한 토스트, Empty · Loading 상태, 에러 · NotFound 페이지를 공통 UI로 만들고, 비로그인 사용자에게는 로그인 페이지로 이동하는 액션을 제공합니다.",
-        media: { alt: "토스트와 에러 화면" },
+          "영화와 TV 시리즈의 선호 장르를 단계별로 선택하고, 이전 · 다음 페이지를 오가도 선택 값이 유지되도록 해 마지막 단계에서 한 번에 제출합니다.",
+        media: {
+          src: `${TASTEBOX_IMAGE_DIR}/preference.png`,
+          alt: "영화 · TV 취향 장르 선택 화면",
+        },
       },
     ],
 
