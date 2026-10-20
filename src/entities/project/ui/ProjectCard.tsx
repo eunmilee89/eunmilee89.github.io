@@ -1,12 +1,11 @@
 import Link from "next/link";
 import { Badge } from "@/shared/ui/badge";
 import { MediaFrame } from "@/shared/ui/media-frame";
-import { getTechNames } from "../lib/getTechNames";
 import type { Project } from "../model/types";
 
 type ProjectCardProps = Pick<
   Project,
-  "slug" | "title" | "tagline" | "heroMedia" | "techStack"
+  "slug" | "title" | "tagline" | "heroMedia" | "badge"
 >;
 
 export function ProjectCard({
@@ -14,7 +13,7 @@ export function ProjectCard({
   title,
   tagline,
   heroMedia,
-  techStack,
+  badge,
 }: ProjectCardProps) {
   return (
     <Link href={`/projects/${slug}`} className="group block">
@@ -31,14 +30,9 @@ export function ProjectCard({
       <p className="mt-2 text-sm leading-relaxed text-secondary break-keep md:mt-3 md:text-base">
         {tagline}
       </p>
-      {/* 태그 수가 많아 모바일에서는 가독성을 위해 숨긴다 */}
-      <ul className="mt-5 hidden flex-wrap gap-2 md:flex">
-        {getTechNames(techStack).map((name) => (
-          <li key={name}>
-            <Badge variant="outline">{name}</Badge>
-          </li>
-        ))}
-      </ul>
+      <Badge variant="outline" className="mt-4 md:mt-5">
+        {badge}
+      </Badge>
     </Link>
   );
 }

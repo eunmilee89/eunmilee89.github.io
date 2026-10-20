@@ -192,4 +192,57 @@ export const PROJECTS: Project[] = [
       },
     ],
   },
+  // TODO: 캐러셀 확인용 임시 데이터. 실제 프로젝트가 추가되면 교체한다
+  {
+    slug: "sample-project",
+    badge: "PERSONAL PROJECT · FRONTEND",
+    title: "Sample Project",
+    tagline: "캐러셀 확인용 임시 프로젝트입니다. 실제 프로젝트로 교체될 예정입니다.",
+    summary: "임시 프로젝트 요약입니다.",
+    links: [],
+    heroMedia: { alt: "Sample Project 메인 화면" },
+
+    overview: {
+      meta: [
+        { label: "기간", value: "미정" },
+        { label: "인원", value: "1인" },
+        { label: "역할", value: "프론트엔드" },
+        { label: "구분", value: "개인 프로젝트" },
+      ],
+      description: "임시 프로젝트 소개입니다.",
+    },
+
+    features: [
+      {
+        title: "임시 기능",
+        description: "임시 기능 설명입니다.",
+        media: { alt: "임시 기능 화면" },
+      },
+    ],
+
+    techStack: [
+      {
+        category: "FRONTEND",
+        items: [
+          { name: "Next.js", reason: "임시 사용 이유입니다." },
+          { name: "TypeScript", reason: "임시 사용 이유입니다." },
+        ],
+      },
+    ],
+
+    architecture: {
+      notes: [{ title: "임시 구조", description: "임시 구조 설명입니다." }],
+    },
+
+    challenges: [
+      {
+        hash: "#0000000",
+        title: "임시 도전 과제",
+        problem: "임시 문제 설명입니다.",
+        cause: "임시 원인 설명입니다.",
+        solution: "임시 해결 방법입니다.",
+        result: "임시 결과입니다.",
+      },
+    ],
+  },
 ];
