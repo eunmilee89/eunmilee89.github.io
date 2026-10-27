@@ -8,19 +8,18 @@ import { SocialLink } from "@/shared/ui/social-link";
 
 export function Hero() {
   return (
-    <div className="flex flex-col-reverse lg:flex-row items-center justify-between lg:gap-4 md:py-10 lg:py-0 md:px-8 lg:px-0 max-w-[102rem] mx-auto">
+    <div className="flex flex-col-reverse lg:flex-row items-center justify-between lg:gap-4 lg:py-10 md:px-8 lg:px-0 max-w-[102rem] mx-auto">
       <div className="text-center lg:text-left lg:py-48 lg:pl-20 2xl:pl-30">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black leading-tight break-keep tracking-tight">
-          안녕하세요.{" "}
-          <GradientText>프론트엔드</GradientText>{" "}
-          개발자 이은미입니다.
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black leading-tight break-keep tracking-tight block animate-rise-in [animation-delay:150ms] motion-reduce:animate-none">
+          안녕하세요. <GradientText>프론트엔드</GradientText> 개발자
+          이은미입니다.
         </h2>
-        <div className="text-subtext mt-4 text-sm sm:text-base md:text-base max-w-md md:max-w-lg lg:max-w-3xl mx-auto lg:mx-0 break-keep tracking-wide">
+        <div className="text-subtext mt-4 text-sm sm:text-base md:text-base max-w-md md:max-w-lg lg:max-w-3xl mx-auto lg:mx-0 break-keep tracking-wide block animate-rise-in [animation-delay:300ms] motion-reduce:animate-none">
           새로운 기술을 학습하고 실제 제품에 적용하는 과정을 좋아합니다. 사용자
           중심의 부드러운 인터렉션과 완성도 높은 인터페이스를 추구하는
           개발자입니다.
         </div>
-        <div className="flex items-center justify-center lg:justify-start gap-3 lg:gap-4 mt-8 flex-wrap">
+        <div className="flex items-center justify-center lg:justify-start gap-3 lg:gap-4 mt-8 flex-wrap animate-rise-in [animation-delay:450ms] motion-reduce:animate-none">
           <LinkButton
             label="이력서 보기"
             href={RESUME_PATH}
@@ -59,7 +58,7 @@ export function Hero() {
           alt="귀여운 유령 캐릭터 로고"
           width={500}
           height={500}
-          className="w-56 h-56 md:w-72 md:h-72 lg:w-[500px] lg:h-[500px] dark:mix-blend-screen dark:invert lg:mb-20"
+          className="w-56 h-56 md:w-72 md:h-72 lg:w-[500px] lg:h-[500px] dark:mix-blend-screen dark:invert lg:mb-20 block animate-rise-in [animation-delay:150ms] motion-reduce:animate-none"
           priority
         />
       </div>
