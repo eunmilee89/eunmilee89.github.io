@@ -1,7 +1,7 @@
 import { GradientText } from "@/shared/ui/gradient-text";
 import { LinkButton } from "@/shared/ui/link-button";
+import { SpotlightSurface } from "@/shared/ui/spotlight-surface";
 import { FlowSteps } from "./FlowSteps";
-import { SpotlightSurface } from "./SpotlightSurface";
 
 export const PROJECT_LIST_ID = "project-list";
 const COUNT_DIGITS = 2;
