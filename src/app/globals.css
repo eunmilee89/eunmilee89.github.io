@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --font-sans:
@@ -13,7 +14,8 @@
   @keyframes glow-pulse {
     0%,
     100% {
-      box-shadow: 0 0 6px color-mix(in srgb, var(--color-primary) 40%, transparent);
+      box-shadow: 0 0 6px
+        color-mix(in srgb, var(--color-primary) 40%, transparent);
     }
     50% {
       box-shadow: 0 0 18px var(--color-primary);
@@ -99,6 +101,56 @@
     --subtext: #c0c0c8;
     --surface: #111113;
     --surface-2: #18181b;
+  }
+}
+
+/* 토큰이 이미 다크 모드에서 바뀌므로 prose-invert 없이 토큰만 연결한다 */
+.prose {
+  --tw-prose-body: var(--color-subtext);
+  --tw-prose-headings: var(--color-foreground);
+  --tw-prose-bold: var(--color-foreground);
+  --tw-prose-links: var(--color-primary);
+  --tw-prose-code: var(--color-primary);
+  --tw-prose-quotes: var(--color-secondary);
+  --tw-prose-quote-borders: var(--color-primary);
+  --tw-prose-counters: var(--color-secondary);
+  --tw-prose-bullets: var(--color-secondary);
+  --tw-prose-hr: var(--color-line);
+  --tw-prose-th-borders: var(--color-line);
+  --tw-prose-td-borders: var(--color-line);
+  --tw-prose-pre-bg: var(--color-surface-2);
+  --tw-prose-pre-code: var(--color-foreground);
+}
+
+.prose code::before,
+.prose code::after {
+  content: none;
+}
+
+.prose :not(pre) > code {
+  border-radius: 0.25rem;
+  background: var(--color-surface-2);
+  padding: 0.125rem 0.375rem;
+  font-weight: 400;
+}
+
+.prose pre {
+  border: 1px solid var(--color-line);
+}
+
+/* typography 기본값이 첫 요소와 hr 바로 뒤 제목의 위 여백을 0으로 두므로 그 경우는 제외한다 */
+.prose :where(h2, h3):not(:first-child, hr + *) {
+  margin-top: 2.5em;
+}
+
+/* Shiki는 토큰 색을 --shiki-light / --shiki-dark 변수로만 내보낸다 (rehypeShiki 참고) */
+.prose pre span {
+  color: var(--shiki-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  .prose pre span {
+    color: var(--shiki-dark);
   }
 }
 
