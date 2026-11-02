@@ -3,7 +3,7 @@ import { cn } from '@/shared/lib';
 
 interface BadgeProps {
   children: ReactNode;
-  variant?: 'outline' | 'solid' | 'mono';
+  variant?: 'outline' | 'solid' | 'mono' | 'subtle';
   dot?: boolean;
   className?: string;
 }
@@ -12,6 +12,7 @@ const variants = {
   outline: 'border border-primary/40 text-primary bg-primary/5',
   solid: 'bg-primary/15 text-primary',
   mono: 'border border-line bg-surface-2 font-mono text-primary',
+  subtle: 'border border-line bg-background text-secondary',
 } as const;
 
 export function Badge({ children, variant = 'outline', dot, className }: BadgeProps) {

@@ -14,7 +14,7 @@ export function CodingTestListView({
   const offset = (currentPage - 1) * POSTS_PER_PAGE;
 
   return (
-    <div className="flex flex-col gap-10 md:gap-12">
+    <div className="flex flex-col gap-8 md:gap-10">
       <CodingTestTable
         posts={posts.slice(offset, offset + POSTS_PER_PAGE)}
         firstRowNumber={posts.length - offset}
