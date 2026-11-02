@@ -10,6 +10,22 @@
   --animate-gradient-flow: gradient-flow 6s linear infinite;
   --animate-blob-drift: blob-drift 14s ease-in-out infinite alternate;
   --animate-flow-dot: flow-dot 3s ease-in-out infinite;
+  --animate-grape-pop: grape-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+  --animate-cursor-blink: cursor-blink 1s steps(1) infinite;
+
+  /* 터미널 커서처럼 서서히 흐려지지 않고 딱딱 켜졌다 꺼진다 */
+  @keyframes cursor-blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes grape-pop {
+    from {
+      opacity: 0;
+      scale: 0.5;
+    }
+  }
 
   @keyframes glow-pulse {
     0%,
@@ -79,6 +95,11 @@
   --line: #d5d4dc;
   --surface: #fafafa;
   --surface-2: #f4f4f5;
+  /* 아직 안 익은 포도알. 겹친 알이 비쳐 보이지 않도록 투명도 대신 테마별 단색을 쓴다 */
+  --grape-empty: #e1e8d6;
+  --grape-empty-shade: #c6d0b8;
+  --grape-future: #f0f3eb;
+  --grape-future-shade: #e1e6d9;
 }
 
 @theme inline {
@@ -101,6 +122,10 @@
     --subtext: #c0c0c8;
     --surface: #111113;
     --surface-2: #18181b;
+    --grape-empty: #3a4332;
+    --grape-empty-shade: #2b3226;
+    --grape-future: #23271f;
+    --grape-future-shade: #1b1e18;
   }
 }
 
@@ -110,7 +135,7 @@
   --tw-prose-headings: var(--color-foreground);
   --tw-prose-bold: var(--color-foreground);
   --tw-prose-links: var(--color-primary);
-  --tw-prose-code: var(--color-primary);
+  --tw-prose-code: var(--color-foreground);
   --tw-prose-quotes: var(--color-secondary);
   --tw-prose-quote-borders: var(--color-primary);
   --tw-prose-counters: var(--color-secondary);
