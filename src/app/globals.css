@@ -10,6 +10,14 @@
   --animate-gradient-flow: gradient-flow 6s linear infinite;
   --animate-blob-drift: blob-drift 14s ease-in-out infinite alternate;
   --animate-flow-dot: flow-dot 3s ease-in-out infinite;
+  --animate-cursor-blink: cursor-blink 1s steps(1) infinite;
+
+  /* 터미널 커서처럼 서서히 흐려지지 않고 딱딱 켜졌다 꺼진다 */
+  @keyframes cursor-blink {
+    50% {
+      opacity: 0;
+    }
+  }
 
   @keyframes glow-pulse {
     0%,
