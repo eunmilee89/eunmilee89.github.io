@@ -110,7 +110,7 @@
   --tw-prose-headings: var(--color-foreground);
   --tw-prose-bold: var(--color-foreground);
   --tw-prose-links: var(--color-primary);
-  --tw-prose-code: var(--color-primary);
+  --tw-prose-code: var(--color-foreground);
   --tw-prose-quotes: var(--color-secondary);
   --tw-prose-quote-borders: var(--color-primary);
   --tw-prose-counters: var(--color-secondary);
