@@ -15,7 +15,7 @@ export function CodingTestPage() {
     <>
       <CodingTestHero />
 
-      <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 pb-20 md:px-6 md:pb-28 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-12 xl:grid-cols-[minmax(0,1fr)_18rem]">
+      <div className="mx-auto grid w-full max-w-7xl gap-10 pb-20 md:px-6 md:pb-28 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-12 xl:grid-cols-[minmax(0,1fr)_18rem]">
         <aside className="mx-auto w-full max-w-sm lg:sticky lg:top-28 lg:col-start-2 lg:row-start-1 lg:max-w-none lg:self-start">
           <Reveal>
             <GrapeBoard
