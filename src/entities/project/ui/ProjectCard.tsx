@@ -18,7 +18,10 @@ export function ProjectCard({
   return (
     <Link href={`/projects/${slug}`} className="group block">
       <div className="relative">
-        <MediaFrame media={heroMedia ?? { alt: title }} />
+        <MediaFrame
+          media={heroMedia ?? { alt: title }}
+          aspectClassName="aspect-[4/3] md:aspect-video"
+        />
         <div
           className="pointer-events-none absolute inset-0 rounded-lg bg-black/0 transition-colors duration-300 ease-out group-hover:bg-black/10 group-focus-visible:bg-black/10 motion-reduce:transition-none"
           aria-hidden

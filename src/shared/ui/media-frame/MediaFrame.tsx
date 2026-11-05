@@ -17,9 +17,11 @@ interface MediaFrameProps {
   className?: string;
   /** 프레임 크기는 고정한 채 안쪽 미디어에만 효과(확대 등)를 줄 때 사용 */
   mediaClassName?: string;
+  /** 미디어 영역의 비율 클래스. 화면 크기별로 비율을 달리할 때 사용 */
+  aspectClassName?: string;
 }
 
-export function MediaFrame({ media, browserChrome, url, className, mediaClassName }: MediaFrameProps) {
+export function MediaFrame({ media, browserChrome, url, className, mediaClassName, aspectClassName = 'aspect-video' }: MediaFrameProps) {
   return (
     <div className={cn('overflow-hidden rounded-lg border border-line bg-surface', className)}>
       {browserChrome && (
@@ -33,7 +35,7 @@ export function MediaFrame({ media, browserChrome, url, className, mediaClassNam
         </div>
       )}
 
-      <div className="relative aspect-video overflow-hidden">
+      <div className={cn('relative overflow-hidden', aspectClassName)}>
         {media?.src ? (
           <MediaImage src={media.src} alt={media.alt} className={mediaClassName} />
         ) : (

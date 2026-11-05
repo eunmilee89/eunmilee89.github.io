@@ -45,14 +45,15 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
   ]);
 
   return (
-    <div ref={emblaRef} className="overflow-hidden">
+    // 모바일에서는 body의 좌우 여백(px-6 + mx-2)만큼 끌어내 카드 이미지를 최대한 크게 보여준다
+    <div ref={emblaRef} className="-mx-8 overflow-hidden md:mx-0">
       <ul className="flex touch-pan-y">
         {createSlides(projects).map(({ key, project, isClone }) => (
           // 반복용 복제 슬라이드는 스크린 리더 · 탭 이동에서 제외해 같은 프로젝트가 중복 노출되지 않게 한다
           <li
             key={key}
             inert={isClone}
-            className="min-w-0 shrink-0 basis-[85%] pl-6 md:basis-1/2 md:pl-10"
+            className="min-w-0 shrink-0 basis-[90%] pl-4 md:basis-1/2 md:pl-10"
           >
             <ProjectCard {...project} />
           </li>

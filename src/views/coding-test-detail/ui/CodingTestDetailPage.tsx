@@ -8,7 +8,7 @@ interface CodingTestDetailPageProps {
 
 export function CodingTestDetailPage({ post }: CodingTestDetailPageProps) {
   return (
-    <article className="mx-auto max-w-5xl px-4 py-4 md:px-6 md:py-10">
+    <article className="mx-auto max-w-5xl py-4 md:px-6 md:py-10">
       <header className="border-b border-line pb-8">
         <time dateTime={post.date} className="font-mono text-xs text-secondary">
           {post.date}

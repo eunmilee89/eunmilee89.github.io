@@ -8,8 +8,8 @@ import { SocialLink } from "@/shared/ui/social-link";
 
 export function Hero() {
   return (
-    <div className="flex flex-col-reverse lg:flex-row items-center justify-between lg:gap-4 lg:py-10 md:px-8 lg:px-0 max-w-[102rem] mx-auto">
-      <div className="text-center lg:text-left lg:py-48 lg:pl-20 2xl:pl-30">
+    <div className="flex flex-col-reverse lg:flex-row items-center justify-between lg:gap-4 lg:py-10 lg:min-h-[calc(100svh-5.5rem)] md:px-8 lg:px-0 max-w-[102rem] mx-auto">
+      <div className="text-center lg:text-left lg:pl-20 2xl:pl-30">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black leading-tight break-keep tracking-tight block animate-rise-in [animation-delay:150ms] motion-reduce:animate-none">
           안녕하세요. <GradientText>프론트엔드</GradientText> 개발자
           이은미입니다.
@@ -58,7 +58,7 @@ export function Hero() {
           alt="귀여운 유령 캐릭터 로고"
           width={500}
           height={500}
-          className="w-56 h-56 md:w-72 md:h-72 lg:w-[500px] lg:h-[500px] dark:mix-blend-screen dark:invert lg:mb-20 block animate-rise-in [animation-delay:150ms] motion-reduce:animate-none"
+          className="w-56 h-56 md:w-72 md:h-72 lg:w-[500px] lg:h-[500px] dark:mix-blend-screen dark:invert block animate-rise-in [animation-delay:150ms] motion-reduce:animate-none"
           priority
         />
       </div>
